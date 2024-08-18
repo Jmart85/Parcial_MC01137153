@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        /* Estilos para la calculadora */
+        .calculator {
+            max-width: 300px; /* Ancho máximo de la calculadora */
+            margin: auto; /* Centra la calculadora horizontalmente */
+            padding: 1rem; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde de la calculadora */
+            border-radius: 5px; /* Bordes redondeados */
+            text-align: center; /* Centra el texto dentro de la calculadora */
+        }
+        /* Estilos para los elementos input y button */
+        input, button {
+            margin: 0.5rem; /* Espaciado externo entre los elementos */
+            padding: 0.5rem; /* Espaciado interno de los elementos */
+            width: calc(100% - 1rem); /* Ancho de los elementos */
+        }
+        /* Estilos específicos para los botones */
+        button {
+            cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal de la calculadora -->
+    <div id="app" class="calculator">
+        <!-- Campo de entrada para el primer número -->
+        <input v-model.number="num1" type="number" placeholder="Número 1">
+        <!-- Campo de entrada para el segundo número -->
+        <input v-model.number="num2" type="number" placeholder="Número 2">
+        <!-- Botón para sumar los números -->
+        <button @click="add">Sumar</button>
+        <!-- Botón para restar el segundo número del primero -->
+        <button @click="subtract">Restar</button>
+        <!-- Botón para multiplicar los números -->
+        <button @click="multiply">Multiplicar</button>
+        <!-- Botón para dividir el primer número por el segundo -->
+        <button @click="divide">Dividir</button>
+        <!-- Muestra el resultado de la operación -->
+        <p>Resultado: {{ result }}</p>
+    </div>
+
+    <!-- Importa Vue.js desde el CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Importa el archivo JavaScript que contiene la lógica de Vue.js -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <!-- Div donde se montará la aplicación de Vue -->
+    <div id="app">
+        <!-- Muestra el valor del contador -->
+        <p>Contador: {{ count }}</p>
+        <!-- Botón para incrementar el contador -->
+        <button @click="increment">Incrementar</button>
+    </div>
+
+    <!-- Cargar Vue.js desde el CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Enlace al archivo JavaScript donde se encuentra la lógica de Vue -->
+    <script src="app.js"></script>
+</body>
+</html>

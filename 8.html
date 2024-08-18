@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente Condicional</title>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <message-component :is-logged-in="isLoggedIn"></message-component>
+        <button @click="toggleLogin">Log in / Log out</button>
+    </div>
+
+    <!-- Importa Vue.js desde el CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Importa el archivo JavaScript con la lógica de Vue -->
+    <script src="app.js"></script>
+</body>
+</html>
